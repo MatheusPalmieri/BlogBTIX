@@ -9,7 +9,7 @@ export const Routes = () => {
   return (
     <section>
       <BrowserRouter basename={"/"}>
-        <Path basename={"/"}>
+        <Path>
           <Route path="/" element={<Home />}  />
           <Route path="/blog-btix" element={<Home />}  />
           <Route path="/User/:id/:username" element={<User />} />
