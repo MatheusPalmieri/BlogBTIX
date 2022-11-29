@@ -43,10 +43,13 @@
 
 <br>
 
-<p>User Profile</p>
+<p>Comment</p>
 <img src="src/assets/screen04.png" width="960px" align="center">
 
 <br>
+
+<p>User Profile</p>
+<img src="src/assets/screen05.png" width="960px" align="center">
 
 ---
 
@@ -57,14 +60,12 @@
 <a href="https://matheuspalmieri.github.io/blog-btix/" target="_blank">Acesso o site do Projeto, clicando aqui.</a>
 
 ```
-https://matheuspalmieri.github.io/blog-btix/    
+https://matheuspalmieri.github.io/blog-btix/
 ```
 
 <br>
 
 ### Requirimentos
-
-<br>
 
 - [Node](https://nodejs.org/en/)
 - [Yarn](https://classic.yarnpkg.com/lang/en/) or [Npm](https://www.npmjs.com/)
@@ -80,15 +81,16 @@ $ git clone https://github.com/MatheusPalmieri/BlogBTIX && cd BlogBTIX
 
 ### Siga as etapas para rodar o Projeto em sua máquina local
 ```
-$ git clone https://github.com/MatheusPalmieri/BlogBTIX
+# Para instalar as dependências necessárias
+$ npm install
 
+# Para startar projeto
+$ npm start
 
+Abra o browser na página "http://localhost:3000" para visualizar.
 
 ```
-
-
-###
-
+<br>
 
 ---
 
@@ -104,9 +106,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [React Content Loader](https://www.npmjs.com/package/react-content-loader)
 - [Big Heads](https://bigheads.io/)
 - [React Router Dom](https://github.com/remix-run/react-router)
-<!-- - [Prettier](https://prettier.io/) -->
-<!-- - [ESLint](https://eslint.org/) -->
 - [Mui Icons](https://mui.com/)
+- [Prettier](https://prettier.io/)
+- [ESLint](https://eslint.org/)
+- [Prop-Types](https://www.npmjs.com/package/prop-types)
 
 <br>
 
@@ -122,11 +125,3 @@ Create for <b>`Matheus Palmieri`</b>👨‍💻
 <br>
 
 <p align="center">🎉Test Blog BTIX Finalizado🚀</p>
-
-
-
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
