@@ -10,9 +10,7 @@ export const Routes = () => {
     <section>
       <BrowserRouter>
         <Path>
-          <Route path="/" element={<Home />}  />
-          <Route path="/blog-btix" element={<Home />}  />
-          <Route path="/BlogBTIX" element={<Home />}  />
+          <Route path="/" element={<Home />} />
           <Route path="/User/:id/:username" element={<User />} />
           <Route path="/Post/:id" element={<Post />} />
         </Path>
