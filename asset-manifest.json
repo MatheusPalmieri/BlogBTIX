@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/blog-btix/static/css/main.9c03d457.css",
+    "main.js": "/blog-btix/static/js/main.84aa35d9.js",
+    "index.html": "/blog-btix/index.html",
+    "main.9c03d457.css.map": "/blog-btix/static/css/main.9c03d457.css.map",
+    "main.84aa35d9.js.map": "/blog-btix/static/js/main.84aa35d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c03d457.css",
+    "static/js/main.84aa35d9.js"
+  ]
+}
