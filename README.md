@@ -57,10 +57,10 @@
 
 ## Rodando A Aplicação
 
-<a href="https://matheuspalmieri.github.io/blog-btix/" target="_blank">Acesso o site do Projeto, clicando aqui.</a>
+<a href="https://blog-btix.vercel.app/" target="_blank">Acesso o site do Projeto, clicando aqui.</a>
 
 ```
-https://matheuspalmieri.github.io/blog-btix/
+https://blog-btix.vercel.app/
 ```
 
 <br>
