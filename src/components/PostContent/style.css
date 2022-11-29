@@ -1,0 +1,23 @@
+.post-content {
+  margin-top: 10px;
+}
+
+.post-content-card {
+  margin: 50px 0;
+}
+
+.post-content-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.post-content-body {
+  font-size: 16px;
+}
+
+.post-content-hr {
+  margin: 20px 2.5%;
+  width: 95%;
+  height: 1px;
+  background-color: #ddd;
+}

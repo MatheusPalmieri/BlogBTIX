@@ -1,0 +1,25 @@
+.user-content {
+    width: 90vw;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-content-line {
+    display: flex;
+    align-items: center;
+    color: #444;
+}
+
+.user-content-icon {
+    margin-right: 5px;
+}
+
+.user-content-link {
+    text-decoration: none;
+    color: #444;
+}

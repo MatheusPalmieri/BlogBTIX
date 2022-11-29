@@ -1,0 +1,9 @@
+.user-section {
+  margin: 20px 0;
+}
+
+.user-section-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

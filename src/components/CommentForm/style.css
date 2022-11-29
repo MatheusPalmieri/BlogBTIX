@@ -1,0 +1,111 @@
+/* Top / Email and Title for Comment */
+
+.comment-form-top {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.comment-form-top > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form-top > div > label,
+.comment-form-middle > label {
+  display: flex;
+  align-items: flex-end;
+  font-size: 16px;
+  color: #666;
+}
+
+.comment-form-top > div > input {
+  outline: none;
+  border: none;
+  border-bottom: 1.5px #ccc solid;
+  height: 30px;
+  padding: 5px;
+  transition: border 0.4s;
+  font-size: 14px;
+}
+
+.comment-form-top > div > input:focus,
+.comment-form-middle textarea:focus {
+  border-color: #e53411;
+}
+
+/* Email */
+
+.comment-form-email {
+  margin-right: 10px;
+}
+
+.comment-form-email input::placeholder,
+.comment-form-name input::placeholder {
+  color: #777;
+  opacity: 0.6;
+}
+
+.comment-form-name {
+  margin-left: 10px;
+}
+
+/* Text Area */
+
+.comment-form-middle {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-form-middle textarea {
+  outline: none;
+  border: none;
+  resize: none;
+  margin: 10px 0;
+  border: 1.5px #ccc solid;
+  border-radius: 5px;
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  font-size: 14px;
+  transition: border 0.4s;
+}
+
+/* Invalid */
+
+.comment-form-error {
+  display: none;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  color: #f00;
+  font-size: 12px;
+}
+
+.show-error-email {
+  display: block;
+}
+
+.show-error-comment {
+  display: block;
+}
+
+/* Footer / Button */
+
+.comment-form-button {
+  border: none;
+  background-color: #e53411;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: background 0.6s;
+  cursor: pointer;
+}
+
+.comment-form-button:hover {
+  background-color: #fa6648;
+}
