@@ -8,10 +8,11 @@ import { Post } from './pages/Post';
 export const Routes = () => {
   return (
     <section>
-      <BrowserRouter basename={"/"}>
+      <BrowserRouter>
         <Path>
           <Route path="/" element={<Home />}  />
           <Route path="/blog-btix" element={<Home />}  />
+          <Route path="/BlogBTIX" element={<Home />}  />
           <Route path="/User/:id/:username" element={<User />} />
           <Route path="/Post/:id" element={<Post />} />
         </Path>
