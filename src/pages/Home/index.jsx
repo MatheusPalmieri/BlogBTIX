@@ -1,18 +1,18 @@
-import { useCallback, useEffect, useState } from "react";
-import "./style.css";
+import React, { useCallback, useEffect, useState } from 'react';
+import './style.css';
 
-import { api } from "../../service/api";
-import { Button } from "../../components/Button";
-import { Header } from "../../components/Header";
-import LoadingPost from "../../components/Loading/LoadingPost";
-import { Posts } from "../../components/Posts";
+import { api } from '../../service/api';
+import { Button } from '../../components/Button';
+import { Header } from '../../components/Header';
+import LoadingPost from '../../components/Loading/LoadingPost';
+import { Posts } from '../../components/Posts';
 
 export const Home = () => {
   const [posts, setPosts] = useState([]);
   const [allPosts, setAllPosts] = useState([]);
   const [page, setPage] = useState(0);
   const [postsPerPage] = useState(10);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
   const [loading, setLoading] = useState(true);
 
   const handleLoadPosts = useCallback(async (page, postsPerPage) => {
@@ -57,11 +57,7 @@ export const Home = () => {
     <section className="container">
       {/* Search */}
       <div className="search-container">
-        <Header
-          searchValue={searchValue}
-          handleChange={handleChange}
-          loading={loading}
-        />
+        <Header searchValue={searchValue} handleChange={handleChange} loading={loading} />
       </div>
 
       {/* Loading Posts */}
@@ -69,22 +65,14 @@ export const Home = () => {
 
       {/* Card Posts */}
       {filteredPosts.length > 0 && <Posts posts={filteredPosts} />}
-      
+
       {!loading && filteredPosts.length === 0 && (
-        <p className="searchNotResult">
-          Sua pesquisa não encontrou nenhum documento correspondente :(
-        </p>
+        <p className="searchNotResult">Sua pesquisa não encontrou nenhum documento correspondente :(</p>
       )}
 
       {/* Button */}
       <div className="button-container">
-        {!searchValue && (
-          <Button
-            text="Load more posts"
-            loadMorePosts={loadMorePosts}
-            disabled={noMorePosts}
-          />
-        )}
+        {!searchValue && <Button text="Load more posts" loadMorePosts={loadMorePosts} disabled={noMorePosts} />}
       </div>
     </section>
   );

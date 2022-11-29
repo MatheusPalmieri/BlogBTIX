@@ -1,16 +1,10 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { CardUser } from "../CardUser";
-import "./style.css";
+import React from 'react';
+import P from 'prop-types';
+import { useNavigate } from 'react-router-dom';
+import { CardUser } from '../CardUser';
+import './style.css';
 
-export const Card = ({
-  id,
-  user,
-  title,
-  body,
-  lengthComments,
-  placeholderButton,
-}) => {
+export const Card = ({ id, user, title, body, lengthComments = [], placeholderButton }) => {
   const navigate = useNavigate();
 
   const goPost = () => navigate(`/Post/${id}/`);
@@ -26,15 +20,27 @@ export const Card = ({
         </div>
 
         <div className="card-footer">
-          <p
-            className="card-footer-text"
-            title="Clique para visualizar os comentários"
-          >
+          <p className="card-footer-text" title="Clique para visualizar os comentários">
             {lengthComments.length} Comentários ...
           </p>
-          <button className="card-footer-button" title="Clique para comentar">{placeholderButton}</button>
+          <button className="card-footer-button" title="Clique para comentar">
+            {placeholderButton}
+          </button>
         </div>
       </div>
     </div>
   );
+};
+
+Card.defaultProps = {
+  lengthComments: [],
+};
+
+Card.propTypes = {
+  id: P.number.isRequired,
+  user: P.object.isRequired,
+  title: P.string.isRequired,
+  body: P.string.isRequired,
+  lengthComments: P.array,
+  placeholderButton: P.string.isRequired,
 };

@@ -1,22 +1,24 @@
-import { useState } from "react";
-import "./style.css";
+import React from 'react';
+import P from 'prop-types';
+import { useState } from 'react';
+import './style.css';
 
 export const CommentForm = ({ buttonText, newComments, setNewComments }) => {
-  const [email, setEmail] = useState("");
-  const [commentName, setCommentName] = useState("");
-  const [commentText, setCommentText] = useState("");
-  const [showErrorEmail, setShowErrorEmail] = useState("");
-  const [showErrorComment, setShowErrorComment] = useState("");
+  const [email, setEmail] = useState('');
+  const [commentName, setCommentName] = useState('');
+  const [commentText, setCommentText] = useState('');
+  const [showErrorEmail, setShowErrorEmail] = useState('');
+  const [showErrorComment, setShowErrorComment] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (email === "") {
-      setShowErrorEmail("show-error-email");
+    if (email === '') {
+      setShowErrorEmail('show-error-email');
       return;
     }
     if (commentText.length <= 3) {
-      setShowErrorComment("show-error-comment");
+      setShowErrorComment('show-error-comment');
       return;
     }
 
@@ -25,12 +27,12 @@ export const CommentForm = ({ buttonText, newComments, setNewComments }) => {
 
     setNewComments([...newComments, { email, name, body }]);
 
-    setShowErrorEmail("");
-    setShowErrorComment("");
+    setShowErrorEmail('');
+    setShowErrorComment('');
 
-    setEmail("");
-    setCommentName("");
-    setCommentText("");
+    setEmail('');
+    setCommentName('');
+    setCommentText('');
   };
 
   return (
@@ -41,9 +43,7 @@ export const CommentForm = ({ buttonText, newComments, setNewComments }) => {
         <div className="comment-form-email">
           <label htmlFor="email">
             E-mail
-            <span className={`${showErrorEmail} comment-form-error`}>
-              Digite seu E-mail
-            </span>
+            <span className={`${showErrorEmail} comment-form-error`}>Digite seu E-mail</span>
           </label>
           <input
             type="email"
@@ -76,10 +76,8 @@ export const CommentForm = ({ buttonText, newComments, setNewComments }) => {
       {/* Text Comment */}
       <div className="comment-form-middle">
         <label htmlFor="comment">
-          O'que deseja comentar?
-          <span className={`${showErrorComment} comment-form-error`}>
-            Digite um Comentário
-          </span>
+          O{"'"}que deseja comentar?
+          <span className={`${showErrorComment} comment-form-error`}>Digite um Comentário</span>
         </label>
         <textarea
           name="comment"
@@ -99,4 +97,14 @@ export const CommentForm = ({ buttonText, newComments, setNewComments }) => {
       </div>
     </form>
   );
+};
+
+CommentForm.defaultProps = {
+  newComments: [],
+};
+
+CommentForm.propTypes = {
+  buttonText: P.string.isRequired,
+  newComments: P.array.isRequired,
+  setNewComments: P.func.isRequired,
 };

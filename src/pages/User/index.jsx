@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./style.css";
 import { request } from "../../service/request";
@@ -28,7 +28,7 @@ export const User = () => {
 
       {loading && <LoadingUser />}
 
-      {!loading && <UserProfile id={id} user={user} />}
+      {!loading && <UserProfile id={user.id} user={user} />}
     </div>
   );
 };

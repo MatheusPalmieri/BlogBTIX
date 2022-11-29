@@ -1,4 +1,6 @@
-import "./style.css";
+import React from 'react';
+import P from 'prop-types';
+import './style.css';
 
 export const PostComment = ({ comment }) => (
   <div className="post-comment-container">
@@ -7,3 +9,7 @@ export const PostComment = ({ comment }) => (
     <p className="post-comment-body">{comment.body}</p>
   </div>
 );
+
+PostComment.propTypes = {
+  comment: P.object.isRequired,
+};

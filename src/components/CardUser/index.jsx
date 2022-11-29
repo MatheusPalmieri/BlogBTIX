@@ -1,3 +1,5 @@
+import React from 'react';
+import P from 'prop-types';
 import { useNavigate } from "react-router-dom";
 import { Avatar } from "../Avatar";
 import "./style.css";
@@ -19,4 +21,8 @@ export const CardUser = ({ user }) => {
       </div>
     </div>
   );
+};
+
+CardUser.propTypes = {
+  user: P.object.isRequired,
 };

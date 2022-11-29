@@ -1,7 +1,15 @@
-import { BigHead } from "@bigheads/core";
+import React from 'react';
+import P from 'prop-types';
+import { BigHead } from '@bigheads/core';
 
 export const Avatar = ({ id }) => {
-  if (typeof id === "string") id = Number(id);
+
+  // console.log(id)
+  // console.log(typeof id)
+  // if(typeof id === 'string') id = Number(id)
+  // console.log('after')
+  // console.log(id)
+  // console.log(typeof id)
 
   switch (id) {
     case 1:
@@ -255,7 +263,7 @@ export const Avatar = ({ id }) => {
         />
       );
     default:
-      console.log("error");
+      console.log('error');
       return (
         <BigHead
           accessory="roundGlasses"
@@ -281,4 +289,8 @@ export const Avatar = ({ id }) => {
         />
       );
   }
+};
+
+Avatar.propTypes = {
+  id: P.number.isRequired,
 };

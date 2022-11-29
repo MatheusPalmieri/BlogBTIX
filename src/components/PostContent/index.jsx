@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
-import { CommentForm } from "../CommentForm";
-import { PostComment } from "../PostComment";
-import "./style.css";
+import React, { useState, useEffect } from 'react';
+import P from 'prop-types';
+import { CommentForm } from '../CommentForm';
+import { PostComment } from '../PostComment';
+import './style.css';
 
 export const PostContent = ({ post }) => {
   const [comments, setComments] = useState([]);
@@ -25,17 +26,15 @@ export const PostContent = ({ post }) => {
       ))}
 
       {newComments.length > 0 &&
-        newComments.map((newComment, index) => (
-          <PostComment comment={newComment} key={index} />
-        ))}
+        newComments.map((newComment, index) => <PostComment comment={newComment} key={index} />)}
 
       <div className="post-content-hr"></div>
 
-      <CommentForm
-        buttonText={"Enviar Comentário"}
-        newComments={newComments}
-        setNewComments={setNewComments}
-      />
+      <CommentForm buttonText={'Enviar Comentário'} newComments={newComments} setNewComments={setNewComments} />
     </div>
   );
+};
+
+PostContent.propTypes = {
+  post: P.object.isRequired,
 };

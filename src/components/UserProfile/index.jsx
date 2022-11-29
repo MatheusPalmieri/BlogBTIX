@@ -1,6 +1,8 @@
-import { UserHeader } from "../UserHeader";
-import { UserContent } from "../UserContent";
-import "./style.css";
+import P from 'prop-types';
+import React from 'react';
+import { UserContent } from '../UserContent';
+import { UserHeader } from '../UserHeader';
+import './style.css';
 
 export const UserProfile = ({ id, user }) => (
   <div className="user-section-profile">
@@ -13,3 +15,8 @@ export const UserProfile = ({ id, user }) => (
     </section>
   </div>
 );
+
+UserProfile.propTypes = {
+  id: P.number.isRequired,
+  user: P.object.isRequired,
+};

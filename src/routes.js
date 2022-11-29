@@ -1,8 +1,9 @@
-import { BrowserRouter, Routes as Path, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Routes as Path, Route } from 'react-router-dom';
 
-import { Home } from "./pages/Home";
-import { User } from "./pages/User";
-import { Post } from "./pages/Post";
+import { Home } from './pages/Home';
+import { User } from './pages/User';
+import { Post } from './pages/Post';
 
 export const Routes = () => (
   <section>

@@ -1,7 +1,8 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import P from 'prop-types';
+import './style.css';
 
-import { Card } from "../Card";
+import { Card } from '../Card';
 
 export const Posts = ({ posts = [] }) => (
   <div className="posts">
@@ -18,3 +19,11 @@ export const Posts = ({ posts = [] }) => (
     ))}
   </div>
 );
+
+Posts.defaultProps = {
+  posts: [],
+};
+
+Posts.propTypes = {
+  posts: P.array.isRequired,
+};
