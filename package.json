@@ -2,7 +2,7 @@
   "name": "BlogBTIX",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://matheuspalmieri.github.io/blog-btix/",
+  "homepage": "https://matheuspalmieri.github.io/BlogBTIX/",
   "dependencies": {
     "@bigheads/core": "^0.3.3",
     "@emotion/react": "^11.10.5",
